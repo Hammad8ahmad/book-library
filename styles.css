@@ -7,7 +7,6 @@ div {
   font-size: large;
 }
 body {
-  font-family: "gazpacho2";
   font-weight: bold;
   background-color: white;
   color: black;
@@ -15,15 +14,6 @@ body {
 ::placeholder {
   color: black;
 }
-@font-face {
-  font-family: "gazpacho";
-  src: url(Gazpacho/Gazpacho\ Heavy.ttf) format("truetype");
-}
-@font-face {
-  font-family: "gazpacho2";
-  src: url(Gazpacho/Gazpacho\ Medium.ttf) format("truetype");
-}
-
 .alert {
   position: absolute;
   /* height: 100px; */
@@ -56,7 +46,6 @@ body {
   border-top: solid 2px black;
   color: black;
   background-color: white;
-  font-family: "gazpacho", sans-serif;
 }
 .main-header:hover {
   color: white;
