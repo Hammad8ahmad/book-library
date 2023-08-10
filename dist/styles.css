@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  font-size: large;
+}
+body {
+  font-family: "gazpacho2";
+  font-weight: bold;
+  background-color: white;
+  color: black;
+}
+::placeholder {
+  color: black;
+}
+@font-face {
+  font-family: "gazpacho";
+  src: url(Gazpacho/Gazpacho\ Heavy.ttf) format("truetype");
+}
+@font-face {
+  font-family: "gazpacho2";
+  src: url(Gazpacho/Gazpacho\ Medium.ttf) format("truetype");
+}
+
+.alert {
+  position: absolute;
+  /* height: 100px; */
+  font-size: 14px;
+  border: 1px solid black;
+  background-color: #df2935;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 25px;
+  z-index: 100;
+  /* width: 180px; */
+  /* max-width: max-content; */
+  top: 67px;
+  left: 260px;
+  /* right: 500px; */
+  /* bottom: 100px; */
+}
+.hidden {
+  display: none;
+}
+.main-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 2px black;
+  border-top: solid 2px black;
+  color: black;
+  background-color: white;
+  font-family: "gazpacho", sans-serif;
+}
+.main-header:hover {
+  color: white;
+  background-color: black;
+}
+.complete-btn {
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border: solid 2px black;
+  background-color: #bde0fe;
+  cursor: pointer;
+}
+.main-container {
+  background-color: #f6fff8;
+  border: solid 2px black;
+  padding: 1rem;
+  max-width: 35%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inp {
+  border: solid 2px black;
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.5rem;
+  outline: none;
+}
+.inp-2 {
+  padding: 10px;
+  border: solid 2px black;
+  margin-top: 0.5rem;
+  outline: none;
+}
+.review-inp {
+  resize: none;
+  /* width: 208px;
+  height: 146px; */
+}
+option {
+  background-color: black;
+  color: white;
+  border: 1px solid red;
+}
+
+.extended-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+/* 
+span {
+  background-color: whitesmoke;
+  padding: 0.5rem; */
+/* border: 1px solid black; */
+/* }
+.test {
+  background-color: lavenderblush;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* border: 1px solid black; */
+
+/* ---- CSS FOR RATING SYSYTEM ---- */
+
+.rating {
+  --dir: right;
+  --fill: gold;
+  --fillbg: rgba(100, 100, 100, 0.15);
+  --heart: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.328l-1.453-1.313q-2.484-2.25-3.609-3.328t-2.508-2.672-1.898-2.883-0.516-2.648q0-2.297 1.57-3.891t3.914-1.594q2.719 0 4.5 2.109 1.781-2.109 4.5-2.109 2.344 0 3.914 1.594t1.57 3.891q0 1.828-1.219 3.797t-2.648 3.422-4.664 4.359z"/></svg>');
+  --star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"/></svg>');
+  --stars: 5;
+  --starsize: 2rem;
+  --symbol: var(--star);
+  --value: 1;
+  --w: calc(var(--stars) * var(--starsize));
+  --x: calc(100% * (var(--value) / var(--stars)));
+  block-size: var(--starsize);
+  inline-size: var(--w);
+  position: relative;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+}
+[dir="rtl"] .rating {
+  --dir: left;
+}
+.rating::-moz-range-track {
+  background: linear-gradient(
+    to var(--dir),
+    var(--fill) 0 var(--x),
+    var(--fillbg) 0 var(--x)
+  );
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--symbol);
+}
+.rating::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to var(--dir),
+    var(--fill) 0 var(--x),
+    var(--fillbg) 0 var(--x)
+  );
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--symbol);
+  -webkit-mask: repeat left center/var(--starsize) var(--symbol);
+}
+.rating::-moz-range-thumb {
+  height: var(--starsize);
+  opacity: 0;
+  width: var(--starsize);
+}
+.rating::-webkit-slider-thumb {
+  height: var(--starsize);
+  opacity: 0;
+  width: var(--starsize);
+  -webkit-appearance: none;
+}
+.rating,
+.rating-label {
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.rating-label {
+  margin-block-end: 1rem;
+}
+
+/* NO JS */
+.rating--nojs::-moz-range-track {
+  background: var(--fillbg);
+}
+.rating--nojs::-moz-range-progress {
+  background: var(--fill);
+  block-size: 100%;
+  mask: repeat left center/var(--starsize) var(--star);
+}
+.rating--nojs::-webkit-slider-runnable-track {
+  background: var(--fillbg);
+}
+.rating--nojs::-webkit-slider-thumb {
+  background-color: var(--fill);
+  box-shadow: calc(0rem - var(--w)) 0 0 var(--w) var(--fill);
+  opacity: 1;
+  width: 1px;
+}
+[dir="rtl"] .rating--nojs::-webkit-slider-thumb {
+  box-shadow: var(--w) 0 0 var(--w) var(--fill);
+}
+/* ---- EXTRA STYLES OF RATING INPUT ---- */
+.rating-input {
+  width: 10.4rem;
+  height: 2.5rem;
+  margin-top: 0.5rem;
+  background-color: white;
+  border: solid 2px black;
+}
+/* ---- ALL THE CSS OF BOOK COMPONENT */
+.name {
+  font-size: 1rem;
+}
+.author {
+  font-size: 14px;
+  color: darkblue;
+}
+.book-cover {
+  width: 120px;
+  height: 150px;
+  /* background-color: lightblue; */
+  border: 1px solid black;
+}
+.individual-component {
+  /* max-width: 300px; */
+  /* background-color: #fdfcdc; */
+  /* padding: 0.5rem; */
+  /* border: 1px solid black; */
+  /* padding: 1rem; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+.book-content {
+  color: black;
+  margin-left: 1rem;
+  max-width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.review {
+  color: red;
+  font-size: 20px;
+}
+.genre-btn {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  width: max-content;
+  border-radius: 15px;
+  border: 1px solid black;
+  background-color: #020202;
+  color: white;
+}
+.delete-btn {
+  width: 3rem;
+  background-color: #e63946;
+  color: white;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  border-radius: 5px;
+  border: 1px black solid;
+  cursor: pointer;
+}
