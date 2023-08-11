@@ -11,80 +11,83 @@
     <!-- // MAIN CONTENT // -->
     <h1 class="main-header">BOOK REVIEW</h1>
     <div class="main-container">
-      <div class="input-1">
-        <div>Book Name :</div>
-        <input
-          class="name-input inp"
-          type="text"
-          placeholder="Write book name"
-        />
-      </div>
-      <div class="input-2">
-        <div>Author Name :</div>
-        <input
-          class="author-input inp"
-          type="text"
-          placeholder="Write author name"
-        />
-      </div>
-      <div class="input-3">
-        <label for="Books">Choose a genre : </label>
-        <select name="Genres" class="inp select">
-          <option value="None">None</option>
-          <option value="Fiction">Fiction</option>
-          <option value="Mystery/Thriller">Mystery/Thriller</option>
-          <option value="Science Fiction (Sci-Fi)">
-            Science Fiction (Sci-Fi)
-          </option>
-          <option value="Fantasy">Fantasy</option>
-          <option value="Romance">Romance</option>
-        </select>
-      </div>
-
-      <div>
-        <div>Book Rating :</div>
-        <label class="rating-label">
-          <!-- <strong>“Half stars” using <code>step="0.5"</code></strong> -->
+      <!-- // MAIN CONTENT // -->
+      <div class="main-content">
+        <div class="whole-input">
+          <div class="description">Book Name :</div>
           <input
-            class="rating rating-input"
-            max="5"
-            oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
-            step="0.5"
-            style="--value: 2.5"
-            type="range"
-            value="2.5"
+            class="name-input inp"
+            type="text"
+            placeholder="Write book name"
           />
-        </label>
+        </div>
+        <div class="whole-input">
+          <div class="description">Author Name :</div>
+          <input
+            class="author-input inp"
+            type="text"
+            placeholder="Write author name"
+          />
+        </div>
+        <div class="whole-input">
+          <label for="Books" class="description">Choose a genre : </label>
+          <select name="Genres" class="inp select">
+            <option value="None">None</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Mystery/Thriller">Mystery/Thriller</option>
+            <option value="Science Fiction (Sci-Fi)">
+              Science Fiction (Sci-Fi)
+            </option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Romance">Romance</option>
+          </select>
+        </div>
+
+        <div class="whole-input">
+          <div class="description">Book Rating :</div>
+          <label class="rating-label">
+            <!-- <strong>“Half stars” using <code>step="0.5"</code></strong> -->
+            <input
+              class="rating rating-input"
+              max="5"
+              oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+              step="0.5"
+              style="--value: 2.5"
+              type="range"
+              value="2.5"
+            />
+          </label>
+        </div>
+        <div>
+          <button class="complete-btn">Completed</button>
+        </div>
       </div>
-      <div>
-        <button class="complete-btn">Completed</button>
+
+      <!-- // EXTENDED CONTENT // -->
+
+      <div class="extended-content">
+        <div class="individual-component">
+          <div class="book-cover"></div>
+          <div class="book-content">
+            <h1 class="name">IT ENDS WITH US</h1>
+            <p class="author">by paul haukins</p>
+            <button class="genre-btn">Fiction</button>
+            <p class="review">4.5/5</p>
+            <button class="delete-btn">Delete</button>
+          </div>
+        </div>
+        <div class="individual-component">
+          <div class="book-cover"></div>
+          <div class="book-content">
+            <h1 class="name">THE GREAT KING</h1>
+            <p class="author">by christopher nolan</p>
+            <p class="review">3.5/5</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- // EXTENDED CONTENT // -->
-
-    <div class="extended-content">
-      <!-- <div class="individual-component">
-        <div class="book-cover"></div>
-        <div class="book-content">
-          <h1 class="name">IT ENDS WITH US</h1>
-          <p class="author">by paul haukins</p>
-          <button class="genre-btn">Fiction</button>
-          <p class="review">4.5/5</p>
-          <button class="delete-btn">Delete</button>
-        </div>
-      </div>
-      <div class="individual-component">
-        <div class="book-cover"></div>
-        <div class="book-content">
-          <h1 class="name">THE GREAT KING</h1>
-          <p class="author">by christopher nolan</p>
-          <p class="review">3.5/5</p>
-        </div>
-      </div> -->
-    </div>
-
-    <script src="dist/bundle.js"></script>
+    <!-- <script src="dist/bundle.js"></script> -->
   </body>
 </html>
 

@@ -3,17 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-div {
-  font-size: large;
-}
-body {
-  font-weight: bold;
-  background-color: white;
-  color: black;
-}
-::placeholder {
-  color: black;
-}
+
 .alert {
   position: absolute;
   /* height: 100px; */
@@ -38,6 +28,7 @@ body {
   display: none;
 }
 .main-header {
+  font-size: 20px;
   text-align: center;
   margin-bottom: 3rem;
   padding-top: 0.5rem;
@@ -51,45 +42,61 @@ body {
   color: white;
   background-color: black;
 }
+.main-container {
+  width: 97%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-content {
+  border: 1px solid black;
+  padding: 0.5rem;
+  width: 45%;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.description {
+  font-size: 12px;
+}
+.inp {
+  /* border: solid 2px black; */
+
+  width: 100%;
+  padding: 3px;
+  /* margin-top: 0.2rem; */
+  outline: none;
+}
+::placeholder {
+  font-size: 10px;
+}
+.whole-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  /* font-size: 14px; */
+}
+.select {
+  font-size: 10px;
+}
 .complete-btn {
   width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  border: solid 2px black;
+  font-size: 10px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border: solid 1px black;
+  border-radius: 2px;
+  margin-top: 5px;
   background-color: #bde0fe;
   cursor: pointer;
 }
-.main-container {
-  background-color: #f6fff8;
-  border: solid 2px black;
-  padding: 1rem;
-  max-width: 35%;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.inp {
-  border: solid 2px black;
-  width: 100%;
-  padding: 10px;
-  margin-top: 0.5rem;
-  outline: none;
-}
-.inp-2 {
-  padding: 10px;
-  border: solid 2px black;
-  margin-top: 0.5rem;
-  outline: none;
-}
-.review-inp {
-  resize: none;
-  /* width: 208px;
-  height: 146px; */
-}
+
 option {
   background-color: black;
   color: white;
@@ -97,10 +104,14 @@ option {
 }
 
 .extended-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  padding: 0.5rem;
+  width: 45%;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 /* 
 span {
@@ -123,7 +134,7 @@ span {
   --heart: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.328l-1.453-1.313q-2.484-2.25-3.609-3.328t-2.508-2.672-1.898-2.883-0.516-2.648q0-2.297 1.57-3.891t3.914-1.594q2.719 0 4.5 2.109 1.781-2.109 4.5-2.109 2.344 0 3.914 1.594t1.57 3.891q0 1.828-1.219 3.797t-2.648 3.422-4.664 4.359z"/></svg>');
   --star: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.25l-6.188 3.75 1.641-7.031-5.438-4.734 7.172-0.609 2.813-6.609 2.813 6.609 7.172 0.609-5.438 4.734 1.641 7.031z"/></svg>');
   --stars: 5;
-  --starsize: 2rem;
+  --starsize: 1.7rem;
   --symbol: var(--star);
   --value: 1;
   --w: calc(var(--stars) * var(--starsize));
@@ -172,9 +183,9 @@ span {
   display: block;
   font-family: ui-sans-serif, system-ui, sans-serif;
 }
-.rating-label {
+/* .rating-label {
   margin-block-end: 1rem;
-}
+} */
 
 /* NO JS */
 .rating--nojs::-moz-range-track {
@@ -199,72 +210,72 @@ span {
 }
 /* ---- EXTRA STYLES OF RATING INPUT ---- */
 .rating-input {
-  width: 10.4rem;
+  /* OLD STYLES  */
+
+  /* width: 10.4rem;
   height: 2.5rem;
   margin-top: 0.5rem;
   background-color: white;
-  border: solid 2px black;
-}
-/* ---- ALL THE CSS OF BOOK COMPONENT */
-.name {
-  font-size: 1rem;
-}
-.author {
-  font-size: 14px;
-  color: darkblue;
-}
-.book-cover {
-  width: 120px;
-  height: 150px;
-  /* background-color: lightblue; */
+  border: solid 2px black; */
+
+  /* NEW STYLES */
+
+  width: 9rem;
+  height: 2rem;
   border: 1px solid black;
-}
-.individual-component {
-  /* max-width: 300px; */
-  /* background-color: #fdfcdc; */
-  /* padding: 0.5rem; */
-  /* border: 1px solid black; */
-  /* padding: 1rem; */
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-between; */
-}
-.book-content {
-  color: black;
-  margin-left: 1rem;
-  max-width: 100%;
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-}
-.review {
-  color: red;
-  font-size: 20px;
-}
-.genre-btn {
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
-  width: max-content;
-  border-radius: 15px;
-  border: 1px solid black;
-  background-color: #020202;
-  color: white;
-}
-.delete-btn {
-  width: 3rem;
-  background-color: #e63946;
-  color: white;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  padding-left: 0.2rem;
-  padding-right: 0.2rem;
-  border-radius: 5px;
-  border: 1px black solid;
-  cursor: pointer;
+  padding: 3px;
+  outline: none;
 }
 
+/* ---- ALL THE CSS OF BOOK COMPONENT */
+
+.individual-component {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+.book-cover {
+  width: 40%;
+  height: 80px;
+
+  background-color: black;
+}
+.book-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.name {
+  font-size: 10px;
+}
+.author {
+  font-size: 8px;
+}
+.genre-btn {
+  max-width: max-content;
+  font-size: 8px;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.review {
+  font-size: 11px;
+}
+.delete-btn {
+  max-width: 2rem;
+  font-size: 8px;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  border: solid black 1px;
+  border-radius: 2px;
+}
 /* Media Query for 375px width */
 
 /*  .inp {
@@ -274,68 +285,3 @@ span {
   margin-top: 0.5rem;
   outline: none;
 } */
-
-@media (max-width: 375px) {
-  * {
-    font-size: 12px;
-  }
-  .main-header {
-    font-size: 18px;
-  }
-
-  div {
-    font-size: 12px;
-  }
-  .inp {
-    width: 100%;
-    font-size: 12px;
-  }
-  body {
-    width: 97%;
-  }
-  .main-container {
-    width: 69%;
-    max-width: 255px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .extended-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    padding: 0.25rem;
-    width: 100%;
-    max-width: 375px;
-    /* margin-left: auto;
-    margin-right: auto; */
-  }
-  .individual-component {
-    width: 70%;
-    max-width: 375px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .book-cover {
-    width: 85px;
-  }
-  .book-content {
-    width: 120px;
-    font-size: 14px;
-  }
-  .author,
-  .name,
-  .review {
-    font-size: 14px;
-  }
-  .genre-btn {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-    width: max-content;
-    border-radius: 10px;
-    border: 1px solid black;
-    background-color: #020202;
-    color: white;
-  }
-}
