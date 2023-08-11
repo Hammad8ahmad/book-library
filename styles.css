@@ -264,3 +264,78 @@ span {
   border: 1px black solid;
   cursor: pointer;
 }
+
+/* Media Query for 375px width */
+
+/*  .inp {
+  border: solid 2px black;
+  width: 100%;
+  padding: 10px;
+  margin-top: 0.5rem;
+  outline: none;
+} */
+
+@media (max-width: 375px) {
+  * {
+    font-size: 12px;
+  }
+  .main-header {
+    font-size: 18px;
+  }
+
+  div {
+    font-size: 12px;
+  }
+  .inp {
+    width: 100%;
+    font-size: 12px;
+  }
+  body {
+    width: 97%;
+  }
+  .main-container {
+    width: 69%;
+    max-width: 255px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .extended-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    width: 100%;
+    max-width: 375px;
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+  .individual-component {
+    width: 70%;
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .book-cover {
+    width: 85px;
+  }
+  .book-content {
+    width: 120px;
+    font-size: 14px;
+  }
+  .author,
+  .name,
+  .review {
+    font-size: 14px;
+  }
+  .genre-btn {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    width: max-content;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: #020202;
+    color: white;
+  }
+}
