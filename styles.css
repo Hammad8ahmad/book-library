@@ -7,20 +7,20 @@
 .alert {
   position: absolute;
   /* height: 100px; */
-  font-size: 14px;
+  font-size: 12px;
+  color: #f1faee;
+  background-color: #d00000;
   border: 1px solid black;
-  background-color: #df2935;
-  color: white;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
   border-radius: 25px;
   z-index: 100;
   /* width: 180px; */
   /* max-width: max-content; */
-  top: 67px;
-  left: 260px;
+  top: 50px;
+  left: 70px;
   /* right: 500px; */
   /* bottom: 100px; */
 }
@@ -28,9 +28,9 @@
   display: none;
 }
 .main-header {
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: solid 2px black;
@@ -60,7 +60,7 @@
   gap: 0.5rem;
 }
 .description {
-  font-size: 12px;
+  font-size: 18px;
 }
 .inp {
   /* border: solid 2px black; */
@@ -71,7 +71,7 @@
   outline: none;
 }
 ::placeholder {
-  font-size: 10px;
+  font-size: 14px;
 }
 .whole-input {
   display: flex;
@@ -81,13 +81,15 @@
   /* font-size: 14px; */
 }
 .select {
-  font-size: 10px;
+  font-size: 14px;
 }
 .complete-btn {
   width: 100%;
+  cursor: pointer;
+  outline: none;
   font-size: 10px;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   border: solid 1px black;
@@ -238,7 +240,7 @@ span {
 }
 .book-cover {
   width: 40%;
-  height: 80px;
+  height: 110px;
 
   background-color: black;
 }
@@ -248,33 +250,38 @@ span {
   gap: 0.3rem;
 }
 .name {
-  font-size: 10px;
+  font-size: 16px;
 }
 .author {
-  font-size: 8px;
+  font-size: 12px;
 }
 .genre-btn {
+  color: #000000;
+  background-color: #ff99c8;
   max-width: max-content;
-  font-size: 8px;
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
+  font-size: 10px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
   border-radius: 20px;
   border: 1px solid black;
 }
 .review {
-  font-size: 11px;
+  font-size: 14px;
 }
 .delete-btn {
-  max-width: 2rem;
-  font-size: 8px;
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
+  color: #f1faee;
+  background-color: #d00000;
+  cursor: pointer;
+  max-width: 2.5rem;
+  font-size: 10px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
   border: solid black 1px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 /* Media Query for 375px width */
 
